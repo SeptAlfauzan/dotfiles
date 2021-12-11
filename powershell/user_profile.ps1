@@ -5,3 +5,4 @@ Set-PoshPrompt Paradox
 
 #Alias
 Set-Alias vim nvim
+Set-Alias touch New-Item
