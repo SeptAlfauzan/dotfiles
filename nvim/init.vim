@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " color scheme
-Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'ghifarit53/tokyonight-vim'
 " nerdree
 Plug 'preservim/nerdtree'
 "nerdtree icon
@@ -46,9 +46,14 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab
+
 syntax on
 set termguicolors
-colorscheme nightfly
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 nnoremap <C-b> :NERDTreeToggle<CR>
 inoremap <C-b> :NERDTreeToggle<CR>
@@ -61,4 +66,6 @@ inoremap <C-Z> :u<CR>
 noremap <C-S-Z> :u<CR>
 inoremap <C-S-Z> :u<CR>
 
-
+"Move line of code
+vnoremap <C-S-Up>   :m '<-2<CR>gv=gv
+vnoremap <C-S-Down> :m '>+1<CR>gv=gv
