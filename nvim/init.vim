@@ -19,6 +19,9 @@ Plug 'andweeb/presence.nvim'
 
 " Dart
 Plug 'dart-lang/dart-vim-plugin'
+
+"Go
+Plug 'fatih/vim-go'
 "Colorized bracket pair
 Plug 'luochen1990/rainbow'
 " telescope
